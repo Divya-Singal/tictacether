@@ -1,0 +1,51 @@
+<div>
+
+  Name of player 1 : <input type="text" placeholder="A" ng-model="players[0].player"> <br>
+  Name of player 2: <input class="mt-5" type="text" placeholder="B" ng-model="players[1].player">
+</div>
+
+<div>
+  <label>Turn of: Player: {{turn.player}} , Symbol : ' {{ turn.symbol }} ' </label>
+</div>
+
+<div class="container">
+
+    <div  ng-repeat="items in board" ng-init="parentIndex = $index" class="row">
+      <div ng-repeat="item in items track by $index" class="col-md-3 brick" ng-click="updateBoard(parentIndex, $index)" >
+         <p> {{item}} </p> 
+      </div>
+
+    </div>
+
+
+<div class="row mt-5">
+  <p ng-repeat="comment in commentary">{{comment}}</p>
+  
+  </div>
+
+  <button class="btn-primary mt-5" ng-click="clearcomments()"> Clear Comments</button>
+
+
+  <button class="btn-primary mt-5" ng-click="playAgain()">Play Again</button>
+  
+  
+</div>
+
+<style>
+
+.brick{
+  border: 2px solid black;
+  width:50px; 
+  height:50px;
+}
+
+.brick > p{
+
+  font-size : 25px;
+  padding: 5px auto;
+}
+
+.mt-5{
+ margin-top : 10px;
+}
+</style>

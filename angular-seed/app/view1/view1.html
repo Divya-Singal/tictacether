@@ -1,0 +1,33 @@
+<button class="btn-primary" ng-click="GameType('new')"> Generate New Game</button>
+<button class="btn-primary" ng-click="GameType('existing')"> Join Existing</button>
+
+<div class="container">
+    <form>
+    
+        <div ng-if="game.type == 'existing'" class="row">
+            <div class="col-md-3">
+                    <label>Enter the Address of the game</label>
+              
+            </div>
+            <div class="col-md-9">
+                    <input class="form-control" ng-model="game.address"/>
+            </div>
+              
+        </div>
+    
+        <div ng-if="game.type != 'none'" class="row">
+
+            <div class="col-md-3">
+                    <label>How much ether you'd bet?</label>
+            </div>
+            <div class="col-md-9">
+                    <input class="form-control" ng-model="game.ether_bet"/>
+
+            </div>
+
+
+                <input type="submit" class="col-md-2 btn-success"> </input>
+        </div>
+
+    </form>
+</div>
