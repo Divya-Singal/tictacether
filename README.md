@@ -31,6 +31,7 @@ step 5: npm install <br>
 Step 6 : cd node <br>
 step 7 : node index  (in the terminal, get the node server running, which will listen to port : 4000)<br>
 
+(in a new terminal window, so that we dont close off our node server)
 Step 8 : cd angular-seed<br>
 Step 9 : npm start ( after running the command in the terminal, browse to the app at localhost:8000/index.html. )<br>
 
